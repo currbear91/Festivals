@@ -10,4 +10,50 @@ Festivals Functionality
 		• Users can organize prioritized performances based off of time-conflicting sets
 			- Alert users 15 minutes before each act begins with stage info, location and proximity. (current attendance at stage??? Live photo feed???)
 	-Uber/Lyft integration???
-	-
+	-Social Media integration
+		•Instagram
+		•Facebook
+		•Twitter
+		•Snapchat
+
+-Connect an artist to event
+
+Events
+	-Name
+	-Location
+	-Wristband ID
+	-Date
+	- _stages
+	- _artists
+	- _users
+	- _
+
+Stages
+	-Name
+	-Location
+
+Users
+	-Name
+	-Email
+	- _events = wristband ID
+	- _calendar
+
+Artist
+	-Name
+	-genre
+	-Bio
+	-Performance Time
+	-image
+	- _stage
+	- _events
+
+	-[Social Links]
+	- Soundcloud API
+
+Calendar 
+	-name
+	-Date
+	- _user
+	- _event
+	- _artist
+

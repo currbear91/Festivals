@@ -5,12 +5,12 @@ var myApp = angular.module('myApp', ['ngRoute'])
 	.when('/', {
 		templateUrl : 'partials/homeDash.html'
 	})
-	// .when('/products', {
-	// 	templateUrl : 'partials/product.html'
-	// })
-	// .when('/orders', {
-	// 	templateUrl : 'partials/orders.html'
-	// })
+	.when('/bumbershoot', {
+		templateUrl : 'partials/bumbershoot.html'
+	})
+	.when('/admin', {
+		templateUrl : 'partials/admin.html'
+	})
 	// .when('/customers', {
 	// 	templateUrl : 'partials/customers.html'
 	// })

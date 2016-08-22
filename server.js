@@ -3,7 +3,7 @@ var app = express();
 var path = require('path')
 var bodyParser = require('body-parser');
 var session = require('express-session')
-require('./server/config/mongoose.js')
+// require('./server/config/mongoose.js')
 app.use(bodyParser.json())
 
 
