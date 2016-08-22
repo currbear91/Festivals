@@ -6,8 +6,6 @@ var session = require('express-session')
 
 app.use(bodyParser.json())
 
-
-
 app.use(express.static(path.join(__dirname, './client/static')));
 app.use(express.static(path.join(__dirname, './client')));
 app.use(express.static(path.join(__dirname, './bower_components')));

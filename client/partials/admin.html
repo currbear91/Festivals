@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+</head>
+<body>
+	<div class='container admin' ng-controller = 'eventsController'>
+		<form ng-submit = "addEvent()">
+			<input type="text" name="name" placeholder="Event Name" ng-model = 'newEvent.name'>	
+			<input type="text" name="location" placeholder="Event Location" ng-model = 'newEvent.location'>	
+			<input type="date" name="date" placeholder="Date of Event" ng-model = 'newEvent.date'>	
+			<input type="submit" name="submit" value="Add Even">	
+		</form>
+		{{levents}}
+	</div>
+
+</body>
+</html>
