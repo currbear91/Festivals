@@ -1,6 +1,6 @@
 console.log("HERE AT MY CONTROLLER FRONT")
 
-myApp.controller('eventsController', function($scope, eventFactory){
+myApp.controller('eventsController', ['$scope', 'eventFactory', function($scope, eventFactory){
 
 	$scope.addEvent= function(){
 		eventFactory.addEvent($scope.newEvent, function(newEvent){
@@ -9,4 +9,4 @@ myApp.controller('eventsController', function($scope, eventFactory){
 			$scope.newEvent = {}
 	}
 
-})
+}])

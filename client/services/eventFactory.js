@@ -9,7 +9,7 @@ myApp.factory('eventFactory', ['$http', function($http){
 		var _this = this
 
 		this.addEvent = function(newEvent, callback){
-			$http.post('/events').then(function(returned_data){
+			$http.post('/events', newEvent).then(function(returned_data){
 				event = returned_data.data
 				console.log("********************")
 				console.log(event)

@@ -1,7 +1,7 @@
 var path = require('path');
 var users = require(path.join(__dirname, '../controllers/sc_users.js'));
 var events = require(path.join(__dirname, '../controllers/sc_events.js'));
-var artists = require(path.join(__dirname, '../controllers/sc_artists.js'));
+// var artists = require(path.join(__dirname, '../controllers/sc_artists.js'));
 
 module.exports = function(app){
 	// User routes
@@ -16,8 +16,8 @@ module.exports = function(app){
 	app.get('/events/:_id', events.show);
 	app.delete('/events/:_id', events.delete);
 	// Artists routes
-	app.get('/artists', artists.index);
-	app.post('/artists', artists.create);
-	app.get('/artists/:_id', artists.show);
-	app.delete('/artists/:_id', artists.delete);
+	// app.get('/artists', artists.index);
+	// app.post('/artists', artists.create);
+	// app.get('/artists/:_id', artists.show);
+	// app.delete('/artists/:_id', artists.delete);
 }

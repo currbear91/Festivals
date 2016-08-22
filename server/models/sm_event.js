@@ -7,7 +7,7 @@ var eventSchema = new mongoose.Schema({
 	endDate : {type : Date, required : true},
 	logoURL : {type : String, required : true},
 	_stages : [{type : mongoose.Schema.Types.ObjectId, ref : 'events'}],
-	_artists : [{type : mongoose.Schema.Types.ObjectId, ref : 'calendars'}]
+	_artists : [{type : mongoose.Schema.Types.ObjectId, ref : 'artists'}]
 }, {timestamps : true});
 
 mongoose.model('events', eventSchema);
