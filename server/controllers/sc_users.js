@@ -26,6 +26,17 @@ module.exports = {
 			}
 		})
 	},
+	create : function(req,res){
+    var user = new User(req.body)
+	    User.save(function(err){
+	      if(err){
+	        console.log(err)
+	      } else{
+	        res.json(user);
+	      }
+	    })
+	},
+
 	login : function(req, res){
 		if(!req.body.name) {
 			console.log('req.body.name does not exist');

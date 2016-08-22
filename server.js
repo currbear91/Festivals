@@ -17,7 +17,7 @@ app.use(session({
 }))
 
 require(path.join(__dirname, 'server', 'config', 'mongoose.js'));
-require(path.join(__dirname, 'server', 'config', 'routes.js'))(app);
+// require(path.join(__dirname, 'server', 'config', 'routes.js'))(app);
 
 app.listen(8000, function(){
 	console.log("Port 8000")

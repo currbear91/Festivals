@@ -8,14 +8,22 @@ myApp.factory('eventFactory', ['$http', function($http){
 
 		var _this = this
 
+		this.index = function(callback){
+			$http.get('/events').then(function(returned_data){
+				event = returned_data.data
+				callback(item)
+			})
+		}
+
 		this.addEvent = function(newEvent, callback){
 			$http.post('/events').then(function(returned_data){
 				event = returned_data.data
 				console.log("********************")
 				console.log(event)
-				callback(event)
+				callback(events)
 			})
 		}
+
 
 	}
 	return new EventsFactory();
