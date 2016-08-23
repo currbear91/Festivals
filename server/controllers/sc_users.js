@@ -40,27 +40,27 @@ module.exports = {
 	},
 
 	login : function(req, res){
-		if(!req.body.name) {
+		if(!req.body.password) {
 			console.log('req.body.name does not exist');
 			res.send("req.body.name doesn't exist");
 		} else {
-			User.create({
-					name : req.body.name,
-					email : req.body.email,
-					password : req.body.password
-				}, function(err, user){
+			console.log("*^*^*^*^*^*", req.body.password, "and", req.body.email);
+			User.findOne({password : req.body.password}, function(err, user){
 				if(err){
-					console.log('user exists, sending that user');
-					User.findOne({name : req.body.name}, function(err, existingUser){
-						req.session.userId = existingUser._id;
-						req.session.name = existingUser.name;
-						res.send(existingUser);
-					})
+					console.log("error message", err);
+					res.send(err);
 				} else {
-					console.log('saved successfully');
-					req.session.userId = user._id;
-					req.session.name = user.name;
-					res.send(user);
+					if(user === null){
+						console.log("user does not exist");
+						res.send("user does not exist");
+					} else {
+						console.log(user);
+						console.log("user logged in");
+						req.session.userId = user._id;
+						req.session.name = user.name;
+						res.send(user);
+					}
+					
 				}
 			});
 		};

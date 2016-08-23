@@ -11,7 +11,7 @@ myApp.factory('eventFactory', ['$http', function($http){
 		this.index = function(callback){
 			$http.get('/events').then(function(returned_data){
 				event = returned_data.data
-				callback(item)
+				callback(event);
 			})
 		}
 
