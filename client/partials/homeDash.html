@@ -4,52 +4,89 @@
 	<title>Festival Dash</title>
 </head>
 <body>
-	<div class = 'dash-snips row'>
-	<table>
-		<tr>
-		<td><a href="#/bonaroo"><div class = "dash-snip col-md-3 ">
-			<h1>Bonaroo</h1>
-			<h5><small>Manchest, TN</small></h5>
-			<img src='http://www.mtsu.edu/bonnaroo/images/blue-bonnaroo-logo.png'>
-			<hr>
-			<div class="home-description">
-			<p>The first Bonnaroo took place in 2002. The founders chose "bonnaroo," a Creole slang word meaning "a really good time," for its literal meaning and to honor the rich New Orleans music tradition they had enjoyed in college.Main attractions of this festival are the multiple stages featuring live music with a diverse array of musical styles including indie rock, classic rock, world music, hip hop, jazz, americana, bluegrass, country music, folk, gospel, reggae, pop, electronica, and other alternative music. </p>
+	<div class = 'dash-snips container' ng-controller="ModalDemoCtrl as $ctrl">
+		<div class = 'row' >
+			
+			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+				<div ng-click="$ctrl.open()"  class = "hvr-grow dash-snip" >
+					<h1>Bonaroo</h1>
+					<h5>Manchest, TN</h5>
+					<img ng-src='http://www.mtsu.edu/bonnaroo/images/blue-bonnaroo-logo.png'>
+					<hr>
+					<div class="home-description" ng-if="$ctrl.showThis">
+						<p >The first Bonnaroo took place in 2002. The founders chose "bonnaroo," a Creole slang word meaning "a really good time," for its literal meaning and to honor the rich New Orleans music tradition they had enjoyed in college.Main attractions of this festival are the multiple stages featuring live music with a diverse array of musical styles including indie rock, classic rock, world music, hip hop, jazz, americana, bluegrass, country music, folk, gospel, reggae, pop, electronica, and other alternative music. </p>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+				<div ng-click="$ctrl.open()"  class = "hvr-grow dash-snip" href="#/event">
+					<h1>Bumbershoot</h1>
+					<h5>Seattle, WA</h5>
+					<img ng-src="http://bumbershoot.com/images/ugc/uploads/misc/Bumbershoot-logo1.png">
+					<hr>
+					<div class="home-description" ng-if="$ctrl.showThis">
+						<p>Sasquatch was an idea born on a hunch that there was untapped demand for a certain kind of festival that catered to the eclectic tastes of music enthusiasts. It started in 2002, which was shortly after a number of the touring festivals (Lollapalooza, Lilith, Horde) had petered out and the beginning of the wave of regional festivals that started with Coachella and now is a dominant force on the music landscape, with Bonnaroo, Austin City Limits, etc.</p>
+					</div>
+				</div>
 			</div>
 			
-		</div></a></td>
-		
-		<td><a href="#/bumbershoot"><div class = "dash-snip col-md-3">
-			<h1>Bumbershoot</h1>
-			<h5><small>Seattle, WA</small></h5>
-			<img src="http://bumbershoot.com/images/ugc/uploads/misc/Bumbershoot-logo1.png">
-			<hr>
-			<div class="home-description">
-			<p>Sasquatch was an idea born on a hunch that there was untapped demand for a certain kind of festival that catered to the eclectic tastes of music enthusiasts. It started in 2002, which was shortly after a number of the touring festivals (Lollapalooza, Lilith, Horde) had petered out and the beginning of the wave of regional festivals that started with Coachella and now is a dominant force on the music landscape, with Bonnaroo, Austin City Limits, etc.</p>
+			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+				<div ng-click="$ctrl.open()"  class = "hvr-grow dash-snip" href="#/event">
+					<h1>EDC</h1>
+					<h5>Las Vegas, NV</h5>
+					<img ng-src="https://static-label.frontgatetickets.com/label/1613/img/header.png">
+					<hr>
+					<div class="home-description" ng-if="$ctrl.showThis">
+						<p>Sasquatch was an idea born on a hunch that there was untapped demand for a certain kind of festival that catered to the eclectic tastes of music enthusiasts. It started in 2002, which was shortly after a number of the touring festivals (Lollapalooza, Lilith, Horde) had petered out and the beginning of the wave of regional festivals that started with Coachella and now is a dominant force on the music landscape, with Bonnaroo, Austin City Limits, etc.</p>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+				<div ng-click="$ctrl.open()"  class = "hvr-grow dash-snip " href="#/event">
+					<h1>Sasquatch</h1>
+					<h5>Gorge, WA</h5>
+					<img src="http://3.bp.blogspot.com/-K76QJO6R_3I/T8KO4KS25oI/AAAAAAAAAGE/VfMhQRsfTDc/s1600/logo.png">
+					<hr>
+					<div class="home-description" ng-if="$ctrl.showThis">
+						<p>Sasquatch was an idea born on a hunch that there was untapped demand for a certain kind of festival that catered to the eclectic tastes of music enthusiasts. It started in 2002, which was shortly after a number of the touring festivals (Lollapalooza, Lilith, Horde) had petered out and the beginning of the wave of regional festivals that started with Coachella and now is a dominant force on the music landscape, with Bonnaroo, Austin City Limits, etc.</p>
+					</div>
+				</div>
 			</div>
 			
-		</div></a></td>
-		<td><a href="#/edc"><div class = "dash-snip col-md-3">
-			<h1>EDC</h1>
-			<h5><small>Las Vegas, NV</small></h5>
-			<img src="https://static-label.frontgatetickets.com/label/1613/img/header.png">
-			<hr>
-			<div class="home-description">
-			<p>Sasquatch was an idea born on a hunch that there was untapped demand for a certain kind of festival that catered to the eclectic tastes of music enthusiasts. It started in 2002, which was shortly after a number of the touring festivals (Lollapalooza, Lilith, Horde) had petered out and the beginning of the wave of regional festivals that started with Coachella and now is a dominant force on the music landscape, with Bonnaroo, Austin City Limits, etc.</p>
-			</div>
-		</div></a></td>
-		<td><a href="#/sasquatch"><div class = "dash-snip col-md-3">
-			<h1>Sasquatch</h1>
-			<h5><small>Gorge, WA</small></h5>
-			<img src="http://3.bp.blogspot.com/-K76QJO6R_3I/T8KO4KS25oI/AAAAAAAAAGE/VfMhQRsfTDc/s1600/logo.png">
-			<hr>
-			<div class="home-description">
-			<p>Sasquatch was an idea born on a hunch that there was untapped demand for a certain kind of festival that catered to the eclectic tastes of music enthusiasts. It started in 2002, which was shortly after a number of the touring festivals (Lollapalooza, Lilith, Horde) had petered out and the beginning of the wave of regional festivals that started with Coachella and now is a dominant force on the music landscape, with Bonnaroo, Austin City Limits, etc.</p>
-			</div>
-		</div></a></td>
-		
-		</tr>
-		</table>
+		</div>
+		<div class='row main'>
+			<h1>Visit Bumbershoot this Memorial Day!</h1>
+			
+		</div>
 	</div>
+<!-- 
+		<div ng-controller="ModalDemoCtrl as $ctrl">
+    <script type="text/ng-template" id="event.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <ul>
+                <li ng-repeat="item in $ctrl.items">
+                    <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ $ctrl.selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Open me!</button>
+    <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>
+    <button type="button" class="btn btn-default" ng-click="$ctrl.open('sm')">Small modal</button>
+    <button type="button" class="btn btn-default" ng-click="$ctrl.toggleAnimation()">Toggle Animation ({{ $ctrl.animationsEnabled }})</button>
+    <button type="button" class="btn btn-default" ng-click="$ctrl.openComponentModal()">Open a component modal!</button>
+    <div ng-show="$ctrl.selected">Selection from a modal: {{ $ctrl.selected }}</div>
+</div> -->
+
 
 </body>
 </html>
