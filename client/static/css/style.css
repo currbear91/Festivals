@@ -49,6 +49,7 @@ background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%,
 		/*background-size: contain;*/
 		width: 200px;
 		height: 100px;
+		margin-bottom: 20px;
 		
 		
 		font-size: .8em;
@@ -63,3 +64,15 @@ background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%,
 
 	}
  
+
+ /*LOGIN*/
+
+ .login, .register{
+ 	background-color: rgba(250,250,250,.1);
+ 	margin: 0 auto;
+ 	display: block;
+ 	/*width: 100%;*/
+ 	text-align: ;
+ 	padding-top: 50px;
+
+ }

@@ -11,9 +11,12 @@ var myApp = angular.module('myApp', ['ngRoute'])
 	.when('/admin', {
 		templateUrl : 'partials/admin.html'
 	})
-	// .when('/customers', {
-	// 	templateUrl : 'partials/customers.html'
-	// })
+	.when('/login', {
+		templateUrl : 'partials/login.html'
+	})
+	.when('/create', {
+		templateUrl : 'partials/registration.html'
+	})
 	.otherwise({
 		redierctTo : '/'
 	})

@@ -6,10 +6,13 @@
 <body>
 	<div class='container admin' ng-controller = 'eventsController'>
 		<form ng-submit = "addEvent()">
-			<input type="text" name="name" placeholder="Event Name" ng-model = 'newEvent.name'>	
+			<input type="text" name="name" placeholder="Event Name" ng-model = 'newEvent.name'>
+			<input type="text" name="description" placeholder="Event Description" ng-model = 'newEvent.description'>
+			<input type="text" name="logo" placeholder="Event Logo URL" ng-model = 'newEvent.logoURL'>
 			<input type="text" name="location" placeholder="Event Location" ng-model = 'newEvent.location'>	
-			<input type="date" name="date" placeholder="Date of Event" ng-model = 'newEvent.date'>	
-			<input type="submit" name="submit" value="Add Even">	
+			<input type="text" name="startDate" placeholder="Start Date - ex 01/01/2001" ng-model = 'newEvent.startDate'>
+			<input type="text" name="endDate" placeholder="End Date - ex 01/02/2001" ng-model = 'newEvent.endDate'>		
+			<input type="submit" name="submit" value="Add Event">	
 		</form>
 		{{levents}}
 	</div>

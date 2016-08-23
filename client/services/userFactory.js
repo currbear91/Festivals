@@ -8,12 +8,12 @@ myApp.factory('userFactory', ['$http', function($http){
 
 		var _this = this
 
-		this.addEvent = function(newEvent, callback){
-			$http.post('/users').then(function(returned_data){
-				event = returned_data.data
+		this.addUser = function(newUser, callback){
+			$http.post('/users/create').then(function(returned_data){
+				user = returned_data.data
 				console.log("********************")
-				console.log(event)
-				callback(event)
+				console.log(user)
+				callback(user)
 			})
 		}
 

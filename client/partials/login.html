@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+
+	<div class = "container login" ng-controller = "userController">
+		<label>Login</label>
+		<table>
+			<form ng-submit = 'login()'>
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" name="emai" placeholder="Email" ng-model='User.email'></td>
+				</tr>
+				<tr>
+					<td>Password:</td>	
+					<td><input type="password" name="password" placeholder = "Password" ng-model= 'User.password'></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p>Not a member? <a href="#/create">Register</a></p></td>
+				</tr>
+			</form>
+		</table>
+
+	</div>
+
+</body>
+</html>
