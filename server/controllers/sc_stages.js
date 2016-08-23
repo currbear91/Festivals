@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Event = mongoose.model('events');
 
 var Stage = mongoose.model('stages');
 module.exports = {
@@ -23,8 +24,15 @@ module.exports = {
 					console.log('not able to save Stage');
 					console.log(err);
 				} else {
-					console.log('saved Stage successfully');
-					res.send(stage);
+					Event.update({_id : req.body.event_id}, {$push : {_stages : stage._id}}, function(err, confirm){
+						if(err){
+							console.log('unable to push stage to event', err);
+							res.send(err);
+						} else {
+							console.log('saved Stage successfully');
+							res.send(stage);
+						}
+					})
 				};
 		});
 	},

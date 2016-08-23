@@ -16,11 +16,13 @@ myApp.factory('eventFactory', ['$http', function($http){
 		}
 
 		this.addEvent = function(newEvent, callback){
+			console.log("^^^^^^", newEvent);
 			$http.post('/events', newEvent).then(function(returned_data){
 				event = returned_data.data
 				console.log("********************")
 				console.log(event)
-				callback(events)
+				event_id = event._id;
+				callback('/admin/stage/'+event_id);
 			})
 		}
 

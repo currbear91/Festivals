@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add Artist Page</title>
+</head>
+<body>
+	<div class='container admin' ng-controller = 'artistsController'>
+		<form ng-submit = "addArtist()">
+			<input type="text" name="name" placeholder="Arist Name" ng-model = 'newArtist.name'>
+			<input type="text" name="genre" placeholder="Genre" ng-model = 'newArtist.genre'>
+			<input type="text" name="bio" placeholder="Arist Bio" ng-model = 'newArtist.bio'>
+			<input type="text" name="imageURL" placeholder="Image URL" ng-model = 'newArtist.imageURL'>
+			<input type="text" name="performanceDate" placeholder="Performance Date - ex 01/01/2001" ng-model = 'newArtist.performanceDate'>
+			<input type="text" name="social" placeholder="Social Media Link" ng-model = 'newArtist.socialLink'>
+			<input type="text" name="music" placeholder="URL to Music" ng-model = 'newArtist.music'>		
+			<input type="submit" name="submit" value="Add Artist to Festival">	
+		</form>
+	</div>
+
+</body>
+</html>
