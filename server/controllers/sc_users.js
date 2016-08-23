@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-
 var User = mongoose.model('users');
+
 module.exports = {
 	index : function(req, res){
 		User.find(function(err, users){
@@ -27,8 +27,10 @@ module.exports = {
 		})
 	},
 	create : function(req,res){
+    console.log(req.body)
     var user = new User(req.body)
-	    User.save(function(err){
+    console.log("********************")
+	    user.save(function(err){
 	      if(err){
 	        console.log(err)
 	      } else{
@@ -42,7 +44,11 @@ module.exports = {
 			console.log('req.body.name does not exist');
 			res.send("req.body.name doesn't exist");
 		} else {
-			User.create({name : req.body.name}, function(err, user){
+			User.create({
+					name : req.body.name,
+					email : req.body.email,
+					password : req.body.password
+				}, function(err, user){
 				if(err){
 					console.log('user exists, sending that user');
 					User.findOne({name : req.body.name}, function(err, existingUser){

@@ -3,6 +3,7 @@ var app = express();
 var path = require('path')
 var bodyParser = require('body-parser');
 var session = require('express-session')
+require(path.join(__dirname, 'server', 'config', 'mongoose.js'));
 
 app.use(bodyParser.json())
 
@@ -16,8 +17,7 @@ app.use(session({
 	maxAgee : 5000000
 }))
 
-require(path.join(__dirname, 'server', 'config', 'mongoose.js'));
-// require(path.join(__dirname, 'server', 'config', 'routes.js'))(app);
+require(path.join(__dirname, 'server', 'config', 'routes.js'))(app);
 
 app.listen(8000, function(){
 	console.log("Port 8000")

@@ -12,6 +12,7 @@ myApp.controller('eventsController', ['$scope', 'eventFactory', function($scope,
 	$scope.addEvent= function(){
 		eventFactory.addEvent($scope.newEvent, function(newEvent){
 			$scope.newEvent = newEvent;
+			console.log(newEvent)
 		})
 			$scope.newEvent = {}
 	}

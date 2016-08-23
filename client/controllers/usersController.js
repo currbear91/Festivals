@@ -1,26 +1,22 @@
-console.log("********************")
-console.log("USERS CONTROLLER FRONT")
-console.log("********************")
 
-console.log("HERE AT MY CONTROLLER FRONT")
-
-myApp.controller('usersController', function($scope, userFactory){
-
+myApp.controller('usersController',['$scope', 'userFactory', function($scope, userFactory){
 	var users = ''
 
-	// var index = function(){
-	// 		userFactory.index(function(returnedData){
-	// 			$scope.users = returnedData
-	// 		})
-	// 	}
-	// index();
+	var index = function(){
+				// console.log("********************")
+			userFactory.index(function(returnedData){
+				$scope.users = returnedData
+			})
+		}
+	index();
 
-	$scope.addUser= function(){
-		userFactory.addUser($scope.newUser, function(newUser){
+	$scope.create= function(){
+		userFactory.create($scope.newUser, function(newUser){
+			console.log("********************")
 			$scope.newUser = newUser;
 			console.log(newUser)
 		})
 			$scope.newUser = {}
 	}
 
-})
+}])
