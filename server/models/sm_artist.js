@@ -3,7 +3,7 @@ var artistSchema = new mongoose.Schema({
 	name : {type : String, required : true },
 	genre : {type : String, required : true },
 	bio : {type : String, required : true},
-	image : {type : String},
+	imageURL : {type : String},
 	performanceDate : {type : Date, required : true},
 	socialLinks : [{type : String}],
 	music : [{type : String}],
