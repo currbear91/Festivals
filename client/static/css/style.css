@@ -15,7 +15,7 @@
 
 body{
 	/*background-color: rgba(229,230,228,1);*/
-	background-color: black;
+	background: linear-gradient(to left, rgba(0,0,0,1),rgba(0,0,0,.9),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.9),rgba(0,0,0,1));
 }
 
 .modal-content{
@@ -53,7 +53,7 @@ background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%,
 
 .dash-snip{
 	margin-top: 150px;
-	background: linear-gradient(to left,rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1));
+	background: linear-gradient(to left,rgba(37,38,39,.7),rgba(37,38,39,.8),rgba(37,38,39,.7),rgba(37,38,39,.6));
 	color: #E5E6E4;	
 	/*color: #E5E6E4;*/
 	/*width: 250px;
@@ -61,24 +61,22 @@ background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%,
 	width: 100%;
 	height: 100%;
 	/*margin-right: 10px;*/
-	padding: 10px;
+	padding-bottom: 25px;
 	text-align: center;
-	/*border: 1px groove #E5E6E4;*/
-	border-radius: 10px;
+	/*border: .4px solid #0C120C;*/
+	/*border-radius: 80%;*/
 }
 
 
-	.home-description{
-		text-align: left;	
+	.home-description p{
+		text-align: justify-all;	
 		overflow: auto;
-		margin-left: 15px;
+		margin-left: 50px;
 		color: whitesmoke;
 		/*background-size: contain;*/
 		width: 200px;
 		height: 100px;
 		margin-bottom: 20px;
-		
-		
 		font-size: .8em;
 	}
 	::-webkit-scrollbar {
@@ -92,7 +90,17 @@ background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%,
 	}
 .main{
 	background-image: url("../img/bumbershoot.jpg");
-	display:block;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:block;
+    /*vertical-align: middle;*/
+    background-size: contain;
+    margin-top: 20px;
+    background-color: rgba(250,250,250,1);
+    width: 100%;
+    height: 500px;
+
+
 }
  
 

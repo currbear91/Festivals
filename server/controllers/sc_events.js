@@ -1,8 +1,12 @@
 var mongoose = require('mongoose');
+var moment = require('moment')
+
+
 
 var Event = mongoose.model('events');
 module.exports = {
 	index : function(req, res){
+
 		Event
 			.find({})
 			.populate('_stages')
@@ -11,6 +15,7 @@ module.exports = {
 			if(err){
 				return res.send(err);
 			} else {
+				console.log(events);
 				// console.log(topics);
 				res.send(events);
 			}

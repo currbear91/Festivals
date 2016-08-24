@@ -6,10 +6,13 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap'])
 		templateUrl : 'partials/homeDash.html'
 	})
 	.when('/event', {
-		templateUrl : 'partials/event.html'
+		templateUrl : 'partials/eventModal.html'
 	})
 	.when('/admin', {
 		templateUrl : 'partials/admin.html'
+	})
+	.when('/admin/event', {
+		templateUrl : 'partials/event.html'
 	})
 	.when('/admin/stage/:_id', {
 		templateUrl: 'partials/stage.html'
