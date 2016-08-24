@@ -3,11 +3,26 @@
 <head>
 	<title>Festival Dash</title>
 </head>
+<script type="text/javascript">
+	$(document).ready(function(){
+    	$('.parallax').parallax();
+	$(function() {
+	    var lastElement = false;
+	    $("ul li").each(function() {
+	        if (lastElement && lastElement.offset().top != $(this).offset().top) {
+	            $(lastElement).addClass("nobullet");
+	        }
+	        lastElement = $(this);
+	    }).last().addClass("nobullet");
+	});
+});
+</script>
+</script>
 <body>
-	<div class = 'dash-snips container' ng-controller="ModalDemoCtrl as $ctrl">
-		<div class = 'row' >
+	<div class = 'dash-snips container-fluid' ng-controller="ModalDemoCtrl as $ctrl">
+		<div class = 'row dash-snip-row' >
 			
-			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
 				<div ng-click="$ctrl.open(1)"  class = "hvr-grow dash-snip" >
 					<h1>Bonaroo</h1>
 					<h5>Manchest, TN</h5>
@@ -18,7 +33,7 @@
 					</div>
 				</div>
 			</div>
-			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
 				<div ng-click="$ctrl.open(2)"  class = "hvr-grow dash-snip" href="#/event">
 					<h1>Bumbershoot</h1>
 					<h5>Seattle, WA</h5>
@@ -30,7 +45,7 @@
 				</div>
 			</div>
 			
-			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
 				<div ng-click="$ctrl.open(3)"  class = "hvr-grow dash-snip" href="#/event">
 					<h1>EDC</h1>
 					<h5>Las Vegas, NV</h5>
@@ -41,7 +56,7 @@
 					</div>
 				</div>
 			</div>
-			<div class = "col-lg-3" style="padding-left: 5px; padding-right: 5px;">
+			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
 				<div ng-click="$ctrl.open(4)"  class = "hvr-grow dash-snip " href="#/event">
 					<h1>Sasquatch</h1>
 					<h5>Gorge, WA</h5>
@@ -54,11 +69,49 @@
 			</div>
 			
 		</div>
-	</div>
-		<div class='container main'>
-			<h1>Visit Bumbershoot this Memorial Day!</h1>
-			
+		<div class ='row'>
+			<div class = 'override col-md-12'>
+				<div class = 'hvr-grow2 main-background'>
+					<div class = 'main-background-img'>
+					</div>	
+					<div class = 'main-background-text'>
+						<div  class = 'main'>
+							<h1><span class = 'bumbershoot'>BumberShoot</span><br> Labor Day Weekend</h1>
+							<h4><span class = 'bumbershoot0'>September</span> <span class = 'bumbershoot1'>2</span>•<span class = 'bumbershoot3'>3</span>•<span class = 'bumbershoot1'>4</span>, 2016</h4>
+							<hr>
+							<br>
+							<h1 class = 'bumbershoot2'>Seattle,WA</h1>					
+						</div>
+
+					</div>
+				</div>
+			</div>
 		</div>
+		<div class="row">
+			<div class = 'main2'>
+				<h1>HEY</h1>
+			</div>
+		</div>
+	</div>
+
+
+
+
+ <!-- <div class="parallax-container-fluid">
+    <div class="parallax"><img src="../static/img/bumbershoot.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/parallax2.jpg"></div>
+  </div> -->
+      
+
+	
 <!-- 
 		<div ng-controller="ModalDemoCtrl as $ctrl">
     <script type="text/ng-template" id="event.html">

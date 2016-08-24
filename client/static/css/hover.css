@@ -36,6 +36,31 @@
   background: linear-gradient(to left,rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1));
 
 }
+.hvr-grow2 {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 5 4 5px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  position: relative;
+
+}
+.hvr-grow2:hover, .hvr-grow2:focus, .hvr-grow2:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1);
+  z-index: -10;
+  box-shadow: 0px 0px 10px rgba(250,250,250,.6);
+  /*background: linear-gradient(to left,rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1));*/
+
+}
+
 
 /* Shrink */
 .hvr-shrink {
