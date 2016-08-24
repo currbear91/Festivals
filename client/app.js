@@ -11,6 +11,12 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap'])
 	.when('/admin', {
 		templateUrl : 'partials/admin.html'
 	})
+	.when('/admin/stage/:_id', {
+		templateUrl: 'partials/stage.html'
+	})
+	.when('/admin/artist/:_id', {
+		templateUrl: 'partials/artist.html'
+	})
 	.when('/login', {
 		templateUrl : 'partials/login.html'
 	})

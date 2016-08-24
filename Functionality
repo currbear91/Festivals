@@ -66,7 +66,37 @@ Calendar
 
 •Develop User/Event/Artist controllers/factories/schemas (Front and Back)
 	-Create a login/registration page 
-	-Front end User controller (Add User(registration), Login, Edit User, )
+	-Front end User controller (Edit User)
+
+
+
+-----TUESDAY-----
+
+
+Front End
+•Create Stage and Artist (Front End)
+	-Admin page
+•Implement Bootstrap UI (Modals) for events on home page.
+•Style Login/Registration pages and Events on home page
+•Create routes for event partial
+	- Hover over show essential info
+	- On click, route to a full description of event(photos, artist line-up, location, etc.)
+
+Back End
+•Make an image rendering page
+	-Artists (Picture URLs)
+	-Events (Logo URLs)
+•Edit User
+	-Email
+	-password
+
+
+-----WEDNESDAY------
+
+Front End
+
+•Create "Attending Event" feature.
+	-Drop down box with events
 
 
 
@@ -74,6 +104,10 @@ Calendar
 
 
 
+
+Back End
+
+•Connect user to Event they are attending
 
 
 

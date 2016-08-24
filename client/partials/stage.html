@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add Stage Page</title>
+</head>
+<body>
+	<div class='container admin' ng-controller = 'stagesController'>
+		<form ng-submit = "addStage()">
+			<input type="text" name="name" placeholder="Stage Name" ng-model = 'newStage.name'>
+			<input type="text" name="location" placeholder="Stage Location" ng-model = 'newStage.location'>	
+			<input type="submit" name="submit" value="Add Stage">	
+		</form>
+		<a href="/#/admin/artist/{{event_id}}">Add Artist to Event</a>
+	</div>
+
+</body>
+</html>
