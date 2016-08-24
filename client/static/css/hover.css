@@ -29,10 +29,12 @@
 
 }
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+  -webkit-transform: scale(1.8);
+  transform: scale(1.8);
   z-index: 100;
   box-shadow: 0px 0px 10px rgba(250,250,250,.6);
+  background: linear-gradient(to left,rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1),rgba(37,38,39,1));
+
 }
 
 /* Shrink */
