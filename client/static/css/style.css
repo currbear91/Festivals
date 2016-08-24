@@ -1,6 +1,57 @@
 *{
 	font-family: 'didot';
+	padding: 0px;
+	margin: 0 auto;
+	/*float: right;*/
 }
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+	
+}
+
+body{
+	/*background-color: rgba(229,230,228,1);*/
+	background: linear-gradient(to left, rgba(0,0,0,1),rgba(0,0,0,.9),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.9),rgba(0,0,0,1));
+}
+
+hr{
+	vertical-align: top;
+	bor
+}
+
+img{
+	width:200px;
+	height:150px;
+	vertical-align: top;
+	/*border: 1px groove ;*/
+	padding: 10px;
+}
+
+ @font-face {
+   font-family: "Bumbershoot";
+   src: url("../sketch-toronto/SketchToronto.woff") format("woff");
+   font-style: normal;
+   font-weight: normal;
+ }
+
+ @font-face{
+ 	font-family: "moon";
+	src: url("../lynzer/Lynzer.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+
+ }
+
+
+
+
+
+
+
 
 .admin{
 	/*border-top: 1px solid white;*/
@@ -13,11 +64,6 @@
 
 
 
-body{
-	/*background-color: rgba(229,230,228,1);*/
-	background: linear-gradient(to left, rgba(0,0,0,1),rgba(0,0,0,.9),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.85),rgba(0,0,0,.9),rgba(0,0,0,1));
-}
-
 .modal-content{
 	color:;
 	background: linear-gradient(to left,rgba(37,38,39,.9),rgba(37,38,39,.8),rgba(37,38,39,.9),rgba(37,38,39,1));
@@ -27,39 +73,45 @@ body{
 	min-height: 300px;
 }
 
-.navbar-default{
-	border: white;
+.navbar-brand{
+	font-size: 3em;
+	/*line-height: -10px;*/
+	padding-bottom: 0px;
+	padding-top: 20px;
+	font-family: "moon";
 }
-
-hr{
-	vertical-align: top;
-}
-
-img{
-	width:150px;
-	height:100px;
-	vertical-align: top;
-	/*background-color: white;*/
-}
-
 
 .navbar{
-background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%, rgba(10,10,10,1) 23%, rgba(26,26,26,1) 57%, rgba(26,26,26,1) 72%, rgba(38,38,38,1) 92%, rgba(43,43,43,1) 100%);	}
+	border: white;
+
+}
+
+
+.navbar-default{
+	background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%, rgba(10,10,10,1) 23%, rgba(26,26,26,1) 57%, rgba(26,26,26,1) 72%, rgba(38,38,38,1) 92%, rgba(43,43,43,1) 100%);	
+}
 
 .row{
 	margin: 0 auto;
 	/*text-align: center;*/
 }
+.dash-snip-row{
+	width:60%;
+}
+
+.dash-snips{
+	padding: 0;
+}
 
 .dash-snip{
-	margin-top: 150px;
-	background: linear-gradient(to left,rgba(37,38,39,.7),rgba(37,38,39,.8),rgba(37,38,39,.7),rgba(37,38,39,.6));
+	margin-top: 50px;
+	/*background: linear-gradient(to left,rgba(37,38,39,.7),rgba(37,38,39,.8),rgba(37,38,39,.7),rgba(37,38,39,.6));*/
 	color: #E5E6E4;	
 	/*color: #E5E6E4;*/
-	/*width: 250px;
-	height: 400px;*/
+	/*width: 250px;*/
+	/*height: 400px;*/
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	/*margin-right: 10px;*/
 	padding-bottom: 25px;
 	text-align: center;
@@ -93,17 +145,101 @@ background: linear-gradient(to right, rgba(46,46,46,1) 1%, rgba(23,23,23,1) 15%,
 
 
 	}
-.main{
-	background-image: url("../img/bumbershoot.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    display:block;
-    /*vertical-align: middle;*/
-    background-size: contain;
-    margin-top: 20px;
-    background-color: rgba(250,250,250,1);
-    width: 100%;
+/*
+.parallax img{
+	display: block;
+	/*width: 500px;
+
+    
+  }*/
+.main-background{
+   	margin: 0 auto;
+   	margin-top: 100px;
+    width: 100%; 
     height: 500px;
+    /*background-image: url('../img/bumbershoot.jpg');*/
+
+   	position: relative;
+    background:linear-gradient(to left,rgba(250,250,250,1),rgba(250,250,250,1),rgba(250,250,250,1),rgba(250,250,250,.9),rgba(250,250,250,.9),rgba(250,250,250,.9),rgba(250,250,250,.9),rgba(250,250,250,.9),rgba(250,250,250,.9),rgba(250,250,250,1),rgba(250,250,250,1),rgba(250,250,250,1),rgba(250,250,250,1));
+    box-shadow: 0px 0px 10px rgba(250,250,250,1);
+   	z-index: -1;
+    -webkit-filter:saturate(2);
+   
+
+
+}
+
+
+.main-background-img{
+   	background-position: center;
+	background-image: url('../img/bumbershoot.jpg');    
+	background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-filter: drop-shadow(0px 10px 60px black);
+    /*-webkit-filter:grayscale();*/
+    position: absolute;
+     width: 100%;
+    height: 500px;
+    /*margin-left: 10%;*/
+    /*overflow: scroll;*/
+    /*box-shadow: 1000px 0px 0px rgba(9,9,9,1);*/
+    z-index: 1;
+
+
+}
+	
+	.main-background-text{
+		/*position: absolute;*/
+		/*width: 100%;*/
+		height: 400px;
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+
+.main{
+	/*position: absolute;*/
+  /*content: '';*/
+  position: absolute;
+  text-align: center;
+  margin-top: 100px;
+  padding-left: 35px;
+  /*margin-right: 20%;*/
+  font-family: "Bumbershoot";
+  
+}
+.override{
+	padding: 0;
+}
+	.bumbershoot{
+		font-family: "Bumbershoot";
+		color: red;
+		font-size: 1.9em;
+
+	}	.bumbershoot0{
+		font-family: "Bumbershoot";
+		color: black;
+		font-size: 1.2em;
+
+	}
+
+	.bumbershoot1{
+		font-family: "Bumbershoot";
+		color: red;
+		font-size: 1em;
+
+	}
+	.bumbershoot2{
+		font-family: "Bumbershoot";
+		color: rgb(27,140,131);
+		font-size: 4em;
+
+	}
+	.bumbershoot3{
+		font-family: "Bumbershoot";
+		color: blue;
+		font-size: 1em;
+
+	}
 
 
 }

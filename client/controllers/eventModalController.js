@@ -8,27 +8,27 @@ angular.module('myApp').controller('ModalDemoCtrl', function ($uibModal, $log) {
   $ctrl.animationsEnabled = true;
 
   $ctrl.open = function (size) {
-    if(size == 1){
-      $ctrl.showThis1 = true;
-      $ctrl.showThis2 = false;
-      $ctrl.showThis3 = false;
-      $ctrl.showThis4 = false;
-    } else if(size == 2){
-      $ctrl.showThis1 = false;
-      $ctrl.showThis2 = true;
-      $ctrl.showThis3 = false;
-      $ctrl.showThis4 = false;
-    } else if(size == 3){
-      $ctrl.showThis1 = false;
-      $ctrl.showThis2 = false;
-      $ctrl.showThis3 = true;
-      $ctrl.showThis4 = false;
-    } else{
-      $ctrl.showThis1 = false;
-      $ctrl.showThis2 = false;
-      $ctrl.showThis3 = false;
-      $ctrl.showThis4 = true;
-    }
+    // if(size == 1){
+    //   $ctrl.showThis1 = true;
+    //   $ctrl.showThis2 = false;
+    //   $ctrl.showThis3 = false;
+    //   $ctrl.showThis4 = false;
+    // } else if(size == 2){
+    //   $ctrl.showThis1 = false;
+    //   $ctrl.showThis2 = true;
+    //   $ctrl.showThis3 = false;
+    //   $ctrl.showThis4 = false;
+    // } else if(size == 3){
+    //   $ctrl.showThis1 = false;
+    //   $ctrl.showThis2 = false;
+    //   $ctrl.showThis3 = true;
+    //   $ctrl.showThis4 = false;
+    // } else{
+    //   $ctrl.showThis1 = false;
+    //   $ctrl.showThis2 = false;
+    //   $ctrl.showThis3 = false;
+    //   $ctrl.showThis4 = true;
+    // }
     var modalInstance = $uibModal.open({
       animation: $ctrl.animationsEnabled,
       ariaLabelledBy: 'modal-title',

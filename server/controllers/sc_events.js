@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var moment = require('moment')
 
 var Event = mongoose.model('events');
+
 module.exports = {
 	index : function(req, res){
 
