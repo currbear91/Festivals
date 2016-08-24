@@ -5,16 +5,27 @@
 	<title>Admin Page</title>
 </head>
 <body>
-	<div class='container admin' ng-controller = 'eventsController'>
-		<form ng-submit = "addEvent()">
-			<input type="text" name="name" placeholder="Event Name" ng-model = 'newEvent.name'>
-			<input type="text" name="description" placeholder="Event Description" ng-model = 'newEvent.description'>
-			<input type="text" name="logo" placeholder="Event Logo URL" ng-model = 'newEvent.logoURL'>
-			<input type="text" name="location" placeholder="Event Location" ng-model = 'newEvent.location'>	
-			<input type="text" name="startDate" placeholder="Start Date - ex 01/01/2001" ng-model = 'newEvent.startDate'>
-			<input type="text" name="endDate" placeholder="End Date - ex 01/02/2001" ng-model = 'newEvent.endDate'>		
-			<input type="submit" name="submit" value="Add Event">	
-		</form>
+	<div class='container admin' ng-controller = 'adminDashboardController'>
+		<table>
+			<thead>
+				<th>Start Date</th>
+				<th>Event Name</th>
+				<th>Location</th>
+				<th># of Stages</th>
+				<th># of Artists</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="event in events">
+					<td>{{event.startDate}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.location}}</td>
+					<td>{{event._stages.length}}</td>
+					<td>{{event._artists.length}}</td>
+					<td><a href="/#/admin/event/{{event._id}}">Edit Event</a> | <a href="/#/admin/stage/{{event._id}}">Add Stage</a> | <a href="/#/admin/artist/{{event._id}}">Add Artist</a> | <button ng-click="delete(event)">Remove Event</button></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 </body>

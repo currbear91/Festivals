@@ -1,0 +1,12 @@
+<div class='container admin' ng-controller = 'eventsController'>
+<h1>{{event.name}}</h1>
+	<form>
+		<input type="text" name="name" ng-model="newEvent.name" >
+		<input type="text" name="description" ng-model = 'newEvent.description'>
+		<input type="text" name="logo" ng-model='newEvent.logoURL'>
+		<input type="text" name="location" ng-model = 'newEvent.location'>	
+		<input type="text" name="startDate" ng-model = 'newEvent.startDate'>
+		<input type="text" name="endDate" ng-model = 'newEvent.endDate'>		
+		<button ng-click="update()" type="submit" name="submit" value="Make Changes to Event">Make Changes to Event</button>	
+	</form>
+</div>

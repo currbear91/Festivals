@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var moment = require('moment');
 
 var Event = mongoose.model('events');
 module.exports = {
@@ -7,12 +8,19 @@ module.exports = {
 			.find({})
 			.populate('_stages')
 			.populate('_artists')
+			.sort({startDate : 1})
 			.exec(function(err, events){
 			if(err){
 				return res.send(err);
 			} else {
-				// console.log(topics);
+				// var newArr = [];
+				// for(var i=0; i<events.length; i++){
+				// 	console.log('yolo')
+				// 	events[i].test = true;
+				// 	events[i].startDate = moment(events[i].startDate).format('MMMM Do YYYY');
+				// 	console.log(moment(events[i].startDate).format('MMMM Do YYYY'));
 				res.send(events);
+				
 			}
 		});
 	},
@@ -51,6 +59,23 @@ module.exports = {
 	    		res.json(event);
 	    	}
     	});
+  	},
+  	update : function(req, res){
+  		Event.update({_id : req.params._id}, {
+  			name : req.body.name,
+  			description : req.body.description,
+  			location : req.body.location,
+  			startDate : req.body.startDate,
+  			endDate : req.body.endDate,
+  			logoURL : req.body.logoURL,
+  		}, function(err, confirm){
+  			if(err){
+  				res.send(err);
+  			} else {
+  				console.log("update success")
+  				res.send({success : true});
+  			}
+  		})
   	},
   	delete : function(req, res){
 		Event.remove({_id : req.params._id}, function(err){

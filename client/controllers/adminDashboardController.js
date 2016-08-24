@@ -13,5 +13,12 @@ myApp.controller('adminDashboardController', ['$scope', '$location', 'eventFacto
 			$scope.event(event);
 		})	
 	}
+	$scope.delete = function(event){
+		event_id = event._id;
+		eventFactory.delete(event_id, function(confirm){
+			console.log(confirm);
+			index();
+		})
+	}
 
 }])
