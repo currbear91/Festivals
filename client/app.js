@@ -5,8 +5,8 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap'])
 	.when('/', {
 		templateUrl : 'partials/homeDash.html'
 	})
-	.when('/bumbershoot', {
-		templateUrl : 'partials/bumbershoot.html'
+	.when('/event', {
+		templateUrl : 'partials/event.html'
 	})
 	.when('/admin', {
 		templateUrl : 'partials/admin.html'
