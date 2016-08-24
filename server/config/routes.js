@@ -20,6 +20,7 @@ module.exports = function(app){
 	app.get('/events', events.index);
 	app.post('/events', events.create);
 	app.get('/events/:_id', events.show);
+	app.put('/events/:_id', events.update);
 	app.delete('/events/:_id', events.delete);
 	// Artists routes
 	app.get('/artists', artists.index);
