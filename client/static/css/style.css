@@ -297,3 +297,11 @@ img{
  	.login, .register, input{
  		margin-top: 20px;
  	}
+
+
+
+/**********EVENT SHOW**************/
+
+.event-main{
+	color: white;
+}
