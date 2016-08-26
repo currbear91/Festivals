@@ -3,7 +3,6 @@ var users = require(path.join(__dirname, '../controllers/sc_users.js'));
 var events = require(path.join(__dirname, '../controllers/sc_events.js'));
 var artists = require(path.join(__dirname, '../controllers/sc_artists.js'));
 var stages = require(path.join(__dirname, '../controllers/sc_stages.js'));
-var calendars = require(path.join(__dirname, '../controllers/sc_calendars.js'));
 
 
 module.exports = function(app){
@@ -12,9 +11,11 @@ module.exports = function(app){
 	// console.log("********************")
 	app.get('/users', users.index);
 	app.post('/users/create', users.create);
+	app.put('/users/addArtist', users.addArtist);
 	app.post('/users', users.login);
 	app.post('/users/logout', users.logout);
 	app.get('/users/:_id', users.show);
+	app.get('/userssession', users.getSession);
 	app.delete('/users/:_id', users.delete);
 	// Events routes
 	app.get('/events', events.index);
@@ -32,9 +33,4 @@ module.exports = function(app){
 	app.post('/stages', stages.create);
 	app.get('/stages/:_id', stages.show);
 	app.delete('/stages/:_id', stages.delete);
-	// Stages routes
-	app.get('/calendars', calendars.index);
-	app.post('/calendars', calendars.create);
-	app.get('/calendars/:_id', calendars.show);
-	app.delete('/calendars/:_id', calendars.delete);
 }

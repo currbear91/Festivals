@@ -1,0 +1,28 @@
+{
+  "name": "Festivals",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Blaine Mercado <blainemercado@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/currbear91/Festivals",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "^2.1.2",
+    "angular-messages": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8",
+    "angular-ui-bootstrap": "^2.1.2",
+    "fullcalendar": "^2.9.1",
+    "moment": "^2.14.1",
+    "angular-ui-calendar": "^1.0.2",
+    "angularjs-datetime-picker": "^0.1.20"
+  }
+}

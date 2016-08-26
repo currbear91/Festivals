@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap'])
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap','ui.calendar', 'angularjs-datetime-picker'])
 
 .config(function($routeProvider){
 	$routeProvider
@@ -7,6 +7,12 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap'])
 	})
 	.when('/event/:_id', {
 		templateUrl : 'partials/eventShow.html'
+	})
+	.when('/calendar', {
+		templateUrl : 'partials/calendar.html'
+	})
+	.when('/artists/:_id', {
+		templateUrl : 'partials/showArtists.html'
 	})
 	.when('/admin', {
 		templateUrl : 'partials/admin.html'

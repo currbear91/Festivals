@@ -5,6 +5,34 @@
 			<h1 class = "col-xs-7">Register</h1>
 		</div>
 		<form ng-submit = 'create()'>
+<<<<<<< HEAD
+			<table>
+				<tr>
+					<td>First:</td>
+					<td><input type="text" name="fname" placeholder="First Name" ng-model='newUser.fname'></td>
+				</tr>
+				<tr>
+					<td>Last:</td>
+					<td><input type="text" name="lname" placeholder="Last Name" ng-model='newUser.lname'></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" name="email" placeholder="Email" ng-model='newUser.email'></td>
+				</tr>
+				<tr>
+					<td>Password:</td>	
+					<td><input type="password" name="password" placeholder = "Password" ng-model= 'newUser.password'></td>
+				</tr>
+				<tr>
+				<!-- <tr>
+					<td>Confirm Password:</td>	
+					<td><input type="password" name="confirmpassword" placeholder = "Confirm Password" ng-model= 'newUser.confirmpass'></td>
+				</tr> -->
+					<td></td>
+					<td><input class='btn btn-primary' type="submit" name="submit" value="Create Account"></td>
+				</tr>
+			</table>
+=======
 		<div class ='row'>
          	<input class="col-xs-5 col-xs-offset-3 input-lg" type="text" name="fname" placeholder="First Name" ng-model='newUser.fname'>
         </div>
@@ -23,6 +51,7 @@
         <div class = 'row'>
         	<input class='btn btn-success' type="submit" name="submit" value="Create Account">
         </div>
+>>>>>>> 643c2f48b10f68b29387f96301123e8484287f1c
 		</form>
 	</div>
 </div>

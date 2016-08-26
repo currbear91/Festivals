@@ -15,6 +15,13 @@ myApp.factory('artistFactory', ['$http', function($http){
 			})
 		}
 
+		this.eventIndex = function(event_id, callback){
+			$http.get('/events/'+event_id).then(function(returned_data){
+				event = returned_data.data
+				callback(event)
+			})
+		}
+
 		this.create = function(newArtist, callback){
 			$http.post('/artists', newArtist).then(function(returned_data){
 				artist = returned_data.data

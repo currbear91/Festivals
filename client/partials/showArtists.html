@@ -1,0 +1,25 @@
+<div class='container admin' ng-controller = 'showArtistsController'>
+	<h2>{{event.title}}</h2>
+	<table>
+		<thead>
+			<th>Artist Name</th>
+			<th>Genre</th>
+			<th>Bio</th>
+			<th>Social Media</th>
+			<th>Performance Date/Time</th>
+			<th>Stage</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="artist in event._artists">
+				<td>{{artist.name}}</td>
+				<td>{{artist.genre}}</td>
+				<td>{{artist.bio}}</td>
+				<td>{{artist.socialLinks}}</td>
+				<td>{{artist.performanceDate}}</td>
+				<td>STAGE EXAMPLE</td>
+				<td><button ng-click="addArtist(artist)">Add Artist</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

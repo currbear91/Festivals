@@ -3,6 +3,9 @@ myApp.controller('adminDashboardController', ['$scope', '$location', 'eventFacto
 	var index = function(){
 			eventFactory.index(function(returnedData){
 				$scope.events = returnedData
+				for(var i=0; i<$scope.events.length; i++){
+					$scope.events[i].start = moment($scope.events[i].start).format('MMMM Do YYYY');
+				};
 			})
 		}
 	index();

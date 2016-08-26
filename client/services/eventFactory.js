@@ -12,10 +12,9 @@ myApp.factory('eventFactory', ['$http', function($http){
 		this.index = function(callback){
 			$http.get('/events').then(function(returned_data){
 				events = returned_data.data
-				for(var i=0; i<events.length; i++){
-					events[i].test = true;
-					events[i].startDate = moment(events[i].startDate).format('MMMM Do YYYY');
-				};
+				// for(var i=0; i<events.length; i++){
+				// 	events[i].startDate = moment(events[i].startDate).format('MMMM Do YYYY');
+				// };
 				callback(events);
 			})
 		}
@@ -23,8 +22,8 @@ myApp.factory('eventFactory', ['$http', function($http){
 			$http.get('/events/'+event_id).then(function(returned_data){
 				console.log("*********", returned_data);
 				event = returned_data.data;
-				event.startDate = moment(event.startDate).format('l');
-				event.endDate = moment(event.endDate).format('l');
+				event.start = moment(event.start).format('l');
+				event.end = moment(event.end).format('l');
 				callback(event);
 			})
 		}
