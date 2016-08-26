@@ -7,6 +7,7 @@ require(path.join(__dirname, 'server', 'config', 'mongoose.js'));
 
 app.use(bodyParser.json())
 
+
 app.use(express.static(path.join(__dirname, './client/static')));
 app.use(express.static(path.join(__dirname, './client')));
 app.use(express.static(path.join(__dirname, './bower_components')));
@@ -16,6 +17,12 @@ app.use(session({
 	saveUninitialized: true,
 	maxAgee : 5000000
 }))
+app.get('/login', function(req,res){
+	res.redirect("/login.html")
+})
+app.get('/registration', function(req,res){
+	res.render("registration")
+})
 
 require(path.join(__dirname, 'server', 'config', 'routes.js'))(app);
 

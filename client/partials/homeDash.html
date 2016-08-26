@@ -18,23 +18,36 @@
 });
 </script>
 </script>
-<body>
+<body class = "homeDash">
+	<div class='nav'>
+		<nav class="navbar navbar-default">
+		  	<div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#/">Festivals</a>
+			    </div>
+		     	 <ul class="nav navbar-nav navbar-right">
+		        	<li><a href="/login">Login</a></li>
+		      	</ul>
+		    </div><!-- /.navbar-collapse -->
+	    </nav>
+	</div>
 	<div class = 'dash-snips container-fluid' ng-controller="ModalDemoCtrl as $ctrl">
 		<div class = 'row dash-snip-row' >
 			
-			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
-				<div ng-click="$ctrl.open(1)"  class = "hvr-grow dash-snip" >
-					<h1>Bonaroo</h1>
-					<h5>Manchest, TN</h5>
-					<img ng-src='http://www.mtsu.edu/bonnaroo/images/blue-bonnaroo-logo.png'>
-					<hr ng-if = "$ctrl.showThis1">
-					<div class="home-description" ng-if="$ctrl.showThis1">
+			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;" ng-repeat= 'event in events'>
+				<a href="#/event/{{event._id}}"><div class = "hvr-grow dash-snip" >
+					<h1>{{event.name}}</h1>
+					<h5>{{event.location}}</h5>
+					<img ng-src='{{event.logoURL}}'>
+					<!-- <hr ng-if = "$ctrl.showThis1"> -->
+					<!-- <div class="home-description" ng-if="$ctrl.showThis1">
 						<p >The first Bonnaroo took place in 2002. The founders chose "bonnaroo," a Creole slang word meaning "a really good time," for its literal meaning and to honor the rich New Orleans music tradition they had enjoyed in college.Main attractions of this festival are the multiple stages featuring live music with a diverse array of musical styles including indie rock, classic rock, world music, hip hop, jazz, americana, bluegrass, country music, folk, gospel, reggae, pop, electronica, and other alternative music. </p>
-					</div>
-				</div>
+					</div> --> 
+				</div></a>
 			</div>
 
-			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
+			<!-- <div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
 				<div ng-click="$ctrl.open(2)"  class = "hvr-grow dash-snip" href="#/event">
 					<h1>Bumbershoot</h1>
 					<h5>Seattle, WA</h5>
@@ -47,7 +60,7 @@
 			</div>
 			
 
-			<div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
+			<a href="#/show"><div class = "col-md-3" style="padding-left: 5px; padding-right: 5px;">
 
 				<div ng-click="$ctrl.open(3)"  class = "hvr-grow dash-snip" href="#/event">
 					<h1>EDC</h1>
@@ -72,20 +85,27 @@
 					</div>
 				</div>
 			</div>
-			
+			 -->
 		</div>
 		<div class ='row'>
-			<div class = 'override col-md-12'>
-				<div class = 'hvr-grow2 main-background'>
-					<div class = 'main-background-img'>
-					</div>	
-					<div class = 'main-background-text'>
-						<div  class = 'main'>
+			<div class = 'override col-md-12 col-xs-12'>
+				<div class =  'main-background'>
+	
+					<img class = 'main-background-img' src="../img/bumbershoot.jpg">
+					
+					<div class = ' main-background-text '>
+						<div  class = 'mainLeft'>
 							<h1><span class = 'bumbershoot'>BumberShoot</span><br> Labor Day Weekend</h1>
 							<h4><span class = 'bumbershoot0'>September</span> <span class = 'bumbershoot1'>2</span>•<span class = 'bumbershoot3'>3</span>•<span class = 'bumbershoot1'>4</span>, 2016</h4>
 							<hr>
 							<br>
 							<h1 class = 'bumbershoot2'>Seattle,WA</h1>					
+						</div>
+						<div class = 'mainRight col-md-3 col-md-offset-9'>
+							<h1>•Music•</h1>
+							<h1>•Comedy•</h1>
+							<h1>•Words•Ideas•Theater•</h1>
+							<h1>•Arts•Culture•Food•</h1>
 						</div>
 
 					</div>

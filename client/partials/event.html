@@ -4,7 +4,7 @@
 	<title>Event Creation Page</title>
 </head>
 <body>
-	<div class='container admin' ng-controller = 'eventsController'>
+	<div class='container admin' ng-controller = 'addEventController'>
 		<form ng-submit = "addEvent()">
 			<input type="text" name="name" placeholder="Event Name" ng-model = 'newEvent.name'>
 			<input type="text" name="description" placeholder="Event Description" ng-model = 'newEvent.description'>

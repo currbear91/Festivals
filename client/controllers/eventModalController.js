@@ -1,4 +1,4 @@
-angular.module('myApp').controller('ModalDemoCtrl', function ($uibModal, $log) {
+angular.module('myApp').controller('ModalDemoCtrl', function ($scope, $uibModal, $routeParams, eventFactory, $log) {
   var $ctrl = this;
   $ctrl.items = ['item1', 'item2', 'item3'];
   $ctrl.showThis1 = false;
@@ -6,8 +6,24 @@ angular.module('myApp').controller('ModalDemoCtrl', function ($uibModal, $log) {
   $ctrl.showThis3 = false;
   $ctrl.showThis4 = false;
   $ctrl.animationsEnabled = true;
+    var index = function(){
+      eventFactory.index(function(returnedData){
+        console.log("********************")
+        $scope.events = returnedData
+        })
+      }
+    index();
 
-  $ctrl.open = function (size) {
+    var show = function(){
+    event_id = $routeParams._id;
+    eventFactory.show(event_id, function(returnedData){
+      $scope.event = returnedData;
+      })
+    }
+    console.log("********************")
+    show();
+
+  $ctrl.open = function (event) {
     // if(size == 1){
     //   $ctrl.showThis1 = true;
     //   $ctrl.showThis2 = false;
@@ -29,6 +45,8 @@ angular.module('myApp').controller('ModalDemoCtrl', function ($uibModal, $log) {
     //   $ctrl.showThis3 = false;
     //   $ctrl.showThis4 = true;
     // }
+
+
     var modalInstance = $uibModal.open({
       animation: $ctrl.animationsEnabled,
       ariaLabelledBy: 'modal-title',
@@ -36,7 +54,6 @@ angular.module('myApp').controller('ModalDemoCtrl', function ($uibModal, $log) {
       templateUrl: './partials/eventModal.html',
       controller: 'ModalInstanceCtrl',
       controllerAs: '$ctrl',
-      size: size,
       resolve: {
         items: function () {
           console.log('here');
