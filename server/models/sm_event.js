@@ -6,6 +6,7 @@ var eventSchema = new mongoose.Schema({
 	start : {type : Date, required : true},
 	end : {type : Date, required : true},
 	logoURL : {type : String, required : true},
+	url : {type : String},
 	_stages : [{type : mongoose.Schema.Types.ObjectId, ref : 'stages'}],
 	_artists : [{type : mongoose.Schema.Types.ObjectId, ref : 'artists'}]
 }, {timestamps : true});
