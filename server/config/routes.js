@@ -14,7 +14,7 @@ module.exports = function(app){
 	app.put('/users/addArtist', users.addArtist);
 	app.post('/users', users.login);
 	app.post('/users/logout', users.logout);
-	app.get('/users/:_id', users.show);
+	app.get('/users/show', users.show);
 	app.get('/userssession', users.getSession);
 	app.delete('/users/:_id', users.delete);
 	// Events routes

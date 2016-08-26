@@ -157,16 +157,16 @@ myApp.controller('calendarController', ['$scope', '$location','$routeParams','$c
 	          center: 'month',
 	          right: 'today prev,next'
         	},
-        events: [
-        	{
-        		title: 'Bumbershoot',
-        		textColor: 'blue',
-        		allDay: true,
-        		start: '2016-08-25T10:00:00',
-        		end: '2016-08-28T22:00:00',
-            	rendering: 'background'
-        	}
-        ],
+	        events: [
+	        	{
+	        		title: 'Bumbershoot',
+	        		textColor: 'blue',
+	        		allDay: true,
+	        		start: '2016-08-25T10:00:00',
+	        		end: '2016-08-28T22:00:00',
+	            	// rendering: 'background'
+	        	}
+	        ],
         dayClick: $scope.agendaDay,
         eventClick: $scope.alertOnEventClick,
         eventDrop: $scope.alertOnDrop,
