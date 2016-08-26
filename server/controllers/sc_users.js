@@ -15,8 +15,7 @@ module.exports = {
 		console.log(req.params._id);
 		User
 			.findOne({_id : req.params._id})
-			.populate('_events')
-			.populate('_calendar')
+			.populate('_events _artists')
 			.exec(function(err, oneUser){
 			if(err){
 				console.log(err);
@@ -26,19 +25,36 @@ module.exports = {
 			}
 		})
 	},
+	getSession : function(req, res){
+		console.log("in the session function on sc_users")
+		sessionId = req.session.userId;
+		res.send(sessionId);
+	},
 	create : function(req,res){
-    console.log(req.body)
-    var user = new User(req.body)
-    console.log("********************")
+    	console.log(req.body)
+    	var user = new User(req.body)
+    	console.log("********************")
 	    user.save(function(err){
 	      if(err){
 	        console.log(err)
 	      } else{
+	      	req.session.userId = user._id;
+			req.session.name = user.name;
 	        res.json(user);
 	      }
 	    })
 	},
-
+	addArtist : function(req, res){
+		User.update({_id : req.session.userId}, {$push : {_artists : req.body._id}}, function(err, confirm){
+			if(err){
+				console.log("error message", err);
+				res.send(err);
+			} else {
+				console.log(confirm);
+				res.send(confirm);
+			}
+		})
+	},
 	login : function(req, res){
 		if(!req.body.password) {
 			console.log('req.body.name does not exist');
@@ -58,6 +74,7 @@ module.exports = {
 						console.log("user logged in");
 						req.session.userId = user._id;
 						req.session.name = user.name;
+						console.log(req.session.userId);
 						res.send(user);
 					}
 					

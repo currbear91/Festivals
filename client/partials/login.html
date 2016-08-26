@@ -7,8 +7,9 @@
 
 	<div class = "container login" ng-controller = "usersController">
 		<label>Login</label>
-		<table>
-			<form ng-submit = 'login()'>
+		<form ng-submit = 'login()'>
+			<table>
+			
 				<tr>
 					<td>Email:</td>
 					<td><input type="email" name="emai" placeholder="Email" ng-model='User.email'></td>
@@ -18,12 +19,12 @@
 					<td><input type="password" name="password" placeholder = "Password" ng-model= 'User.password'></td>
 				</tr>
 				<tr>
-					<td></td>
+					<td><input type="submit" name="submit" value="Login"></td>
 					<td><p>Not a member? <a href="#/create">Register</a></p></td>
 				</tr>
-			</form>
-		</table>
-
+			
+			</table>
+		</form>
 	</div>
 
 </body>

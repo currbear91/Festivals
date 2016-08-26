@@ -17,8 +17,7 @@ module.exports = {
 				return res.send(err);
 			} else {
 
-				console.log(events);
-				// console.log(topics);
+				// console.log(events);
 				res.send(events);
 				
 			}
@@ -26,15 +25,15 @@ module.exports = {
 	},
 	create : function(req, res){
 		// console.log(req.session.userId);
-		console.log("Entire BODY: ", req.body);
-		console.log("Name: ", req.body.name);
+		// console.log("Entire BODY: ", req.body);
+		// console.log("Name: ", req.body.name);
 
 		Event.create({
-				name : req.body.name,
+				title : req.body.name,
 				description : req.body.description,
 				location : req.body.location,
-				startDate : req.body.startDate,
-				endDate : req.body.endDate,
+				start : req.body.startDate,
+				end : req.body.endDate,
 				logoURL : req.body.logoURL
 			}, function(err, event){
 				if(err){
@@ -62,11 +61,11 @@ module.exports = {
   	},
   	update : function(req, res){
   		Event.update({_id : req.params._id}, {
-  			name : req.body.name,
+  			title : req.body.name,
   			description : req.body.description,
   			location : req.body.location,
-  			startDate : req.body.startDate,
-  			endDate : req.body.endDate,
+  			start : req.body.startDate,
+  			end : req.body.endDate,
   			logoURL : req.body.logoURL,
   		}, function(err, confirm){
   			if(err){

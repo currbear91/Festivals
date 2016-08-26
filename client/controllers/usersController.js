@@ -19,6 +19,7 @@ myApp.controller('usersController',['$scope', 'userFactory', function($scope, us
 			$scope.newUser = {}
 	}
 	$scope.login = function(){
+		console.log("@$@$@$@$@$@");
 		$scope.user = {};
 		userFactory.login($scope.User, function(user){
 			$scope.user = user;
