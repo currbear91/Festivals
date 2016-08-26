@@ -12,9 +12,9 @@ module.exports = {
 		});
 	},
 	show : function(req, res){
-		console.log(req.params._id);
+		console.log(req.session.userId);
 		User
-			.findOne({_id : req.params._id})
+			.findOne({_id : req.session.userId})
 			.populate('_events _artists')
 			.exec(function(err, oneUser){
 			if(err){
@@ -28,6 +28,7 @@ module.exports = {
 	getSession : function(req, res){
 		console.log("in the session function on sc_users")
 		sessionId = req.session.userId;
+		console.log("SHOULD BE SESSIONID: ", sessionId);
 		res.send(sessionId);
 	},
 	create : function(req,res){

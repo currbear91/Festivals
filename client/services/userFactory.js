@@ -5,7 +5,7 @@ myApp.factory('userFactory', ['$http', function($http){
 	var users = [];
 	var user = [];
 	
-
+	
 
 
 	function UsersFactory(){
@@ -21,7 +21,7 @@ myApp.factory('userFactory', ['$http', function($http){
 				// return sessionId;
 			});
 		};
-	
+		
 
 		this.index = function(callback){
 			$http.get('/users').then(function(returned_data){
@@ -49,13 +49,13 @@ myApp.factory('userFactory', ['$http', function($http){
 		this.login = function(User, callback){
 			// console.log("^&*^&*^&*^&*")
 			$http.post('/users', User).then(function(returned_data){
-				console.log(returned_data);
+				console.log("JUST LOGGED IN HERE: ", returned_data);
 				getSessionId();
 			})
 		}
 		this.show = function(callback){
-			console.log("IN THE USERFACTORY show FUNCTION", sessionId);
-			$http.get('/users/'+sessionId).then(function(returned_data){
+			console.log("IN THE USERFACTORY show FUNCTION sessionId: ");
+			$http.get('/users/show').then(function(returned_data){
 				console.log("*%*%&^*&^%*&^%", returned_data);
 				callback(returned_data);
 			})
