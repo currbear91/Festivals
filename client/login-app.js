@@ -6,7 +6,7 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap'])
 		templateUrl :'partials/loginPartial.html'
 	})
 	.when('/registration', {
-		templateUrl : 'registration.html'
+		templateUrl : 'partials/registration.html'
 	})
 	.otherwise({
 		redierctTo : '/login.html'

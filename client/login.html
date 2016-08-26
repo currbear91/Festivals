@@ -116,12 +116,26 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
-
+<div class='nav'>
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/#/">Festivals</a>
+        </div>
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login">Login</a></li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+</div>
 <div class = "container-fluid" ng-controller = "usersController">
-  <div >
+  <div>
     <div class = 'login'>
-      <div class = 'row'>   
+      <div class = 'row'>
+        <h1 class = "col-xs-7">Login</h1>
+      </div>
+      <div class = 'row fb-btn'>   
           <fb:login-button class = "col-xs-3 col-xs-offset-4" size="large"
                            onlogin="Log.info.bind('onlogin callback')">
             Login with Facebook

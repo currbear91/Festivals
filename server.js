@@ -20,9 +20,6 @@ app.use(session({
 app.get('/login', function(req,res){
 	res.redirect("/login.html")
 })
-app.get('/registration', function(req,res){
-	res.render("registration")
-})
 
 require(path.join(__dirname, 'server', 'config', 'routes.js'))(app);
 
