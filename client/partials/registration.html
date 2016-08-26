@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Register User</title>
-</head>
-<body>
 
 
-<div class = "register cols-xs-" ng-controller = "usersController">
-	<label>Register</label>
+<div class = "container-fluid" ng-controller = "usersController">
+	<div class = "register">
+		<div class = 'row'>
+			<h1 class = "col-xs-7">Register</h1>
+		</div>
 		<form ng-submit = 'create()'>
+<<<<<<< HEAD
 			<table>
 				<tr>
 					<td>First:</td>
@@ -35,9 +33,27 @@
 					<td><input class='btn btn-primary' type="submit" name="submit" value="Create Account"></td>
 				</tr>
 			</table>
+=======
+		<div class ='row'>
+         	<input class="col-xs-5 col-xs-offset-3 input-lg" type="text" name="fname" placeholder="First Name" ng-model='newUser.fname'>
+        </div>
+        <div class = 'row'>
+        	<input class="col-xs-5 col-xs-offset-3 input-lg" type="text" name="lname" placeholder="Last Name" ng-model='newUser.lname'></td>
+        </div>
+        <div class = 'row'>
+        	<input class="col-xs-5 col-xs-offset-3 input-lg" type="email" name="email" placeholder="Email" ng-model='newUser.email'></td>
+        </div>
+        <div class = 'row'>
+        	<input class="col-xs-5 col-xs-offset-3 input-lg" type="password" name="password" placeholder = "Password" ng-model= 'newUser.password'></td>
+        </div>
+        <div class = 'row'>
+        	<input class="col-xs-5 col-xs-offset-3 input-lg"  type="password" name="confirmpassword" placeholder = "Confirm Password" ng-model= 'newUser.confirmpass'></td>
+        </div>
+        <div class = 'row'>
+        	<input class='btn btn-success' type="submit" name="submit" value="Create Account">
+        </div>
+>>>>>>> 643c2f48b10f68b29387f96301123e8484287f1c
 		</form>
-
 	</div>
+</div>
 
-</body>
-</html>

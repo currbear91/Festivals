@@ -5,8 +5,8 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap','ui.calendar', 'a
 	.when('/', {
 		templateUrl : 'partials/homeDash.html'
 	})
-	.when('/event', {
-		templateUrl : 'partials/eventModal.html'
+	.when('/event/:_id', {
+		templateUrl : 'partials/eventShow.html'
 	})
 	.when('/calendar', {
 		templateUrl : 'partials/calendar.html'
@@ -28,12 +28,6 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap','ui.calendar', 'a
 	})
 	.when('/admin/artist/:_id', {
 		templateUrl: 'partials/artist.html'
-	})
-	.when('/login', {
-		templateUrl : 'partials/login.html'
-	})
-	.when('/create', {
-		templateUrl : 'partials/registration.html'
 	})
 	.otherwise({
 		redierctTo : '/'
