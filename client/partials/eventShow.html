@@ -1,8 +1,8 @@
 
-<div ng-controller = 'ModalDemoCtrl as $ctrl'>
-	<h1 >{{event.name}}</h1>
+<div class = " container-fluid event-main " ng-controller = 'ModalDemoCtrl as $ctrl'>
+	<h1 >{{event.title}}</h1>
 	<h4>{{event.description}}</h4>
-	<h4 ng-repeat = "event in events">{{event._artists[0].name}}</h4>
+	<h4 ng-repeat = "artist in event._artists">{{artist.name}}</h4>
 	
 	<p><img src="{{event.logoURL}}"></p>
 	<!-- <a href="#/event/{{event._id}}"><button>View Event</button></a> -->

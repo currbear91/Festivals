@@ -61,11 +61,11 @@ module.exports = {
   	},
   	update : function(req, res){
   		Event.update({_id : req.params._id}, {
-  			title : req.body.name,
+  			title : req.body.title,
   			description : req.body.description,
   			location : req.body.location,
-  			start : req.body.startDate,
-  			end : req.body.endDate,
+  			start : req.body.start,
+  			end : req.body.end,
   			logoURL : req.body.logoURL,
   		}, function(err, confirm){
   			if(err){
